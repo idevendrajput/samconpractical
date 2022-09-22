@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10dp"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginHorizontal="20dp"
+        android:id="@+id/picture"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="@null"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="This is awesome title"
+        android:textSize="17sp"
+        android:fontFamily="@font/open_sans"
+        app:layout_constraintTop_toBottomOf="@+id/picture"
+        app:layout_constraintStart_toStartOf="@+id/picture"
+        app:layout_constraintEnd_toEndOf="@+id/picture"
+        android:textColor="@color/black"
+        android:layout_marginTop="7dp"
+        android:id="@+id/title"
+        android:maxLines="2"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/layoutPrice"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="199 ₹"
+            android:layout_marginTop="10dp"
+            android:textSize="15sp"
+            android:fontFamily="@font/open_sans"
+            android:id="@+id/actualPrice"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="199"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:fontFamily="@font/open_sans"
+            android:layout_marginStart="10dp"
+            android:id="@+id/price"
+            />
+
+    </LinearLayout>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:text="Add"
+        app:layout_constraintTop_toBottomOf="@+id/layoutPrice"
+        app:cornerRadius="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:backgroundTint="@color/red"
+        app:icon="@drawable/plus_24"
+        app:iconTint="@color/white"
+        app:iconSize="14sp"
+        android:id="@+id/add"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Standard Delivery"
+        android:id="@+id/deliveryType"
+        app:layout_constraintTop_toBottomOf="@+id/add"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginVertical="10dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
